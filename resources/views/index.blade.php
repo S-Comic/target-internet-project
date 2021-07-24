@@ -8,6 +8,8 @@
         <!-- Local Scripts / Styles -->
         <script src="/js/app.js"></script>
         <link href="/css/app.css" rel="stylesheet">
+        <!-- Import Chart.js from npm -->
+        <script src="{{ asset('chart.js/chart.js') }}"></script>
 
         <!-- CDNs -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +24,7 @@
     <main class="container">
         @include('components.output') 
     </main>
+
 
     
     </body>

@@ -1,6 +1,3 @@
-<!-- Import Chart.js from npm -->
-<script src="{{ asset('chart.js/chart.js') }}"></script>
-
 <div id="outputBanner">
     <h2 class = "centered">Results</h2>
 </div>
@@ -9,16 +6,30 @@
 Your results are in the radar chart below:</p>
 
 <!-- Canvas for ChartJS chart -->
-<div class="canvasContainer">
-    <canvas id="radarChart"></canvas>
-</div>
+<section class ="desktopFlexWrapper">
+    <div class="canvasContainer">
+        <canvas id="radarChart"></canvas>
+    </div>
 
-<p class ="centered" style="font-size: 1.5em">Download the visual for personal use, or share on social media:</p>
+    <div class ="largeScreen">
+        <h2>Analysis</h2>
+        <h4>Our Suggestions</h4>
 
-<div class = "buttonContainer">
-    <a class = "borderedButton">Download Here</a>
-    <a class = "borderedButton">Share Here</a>
-</div>
+        <p>Press on the points on the radar chart above 
+           to get insights into the scores you got.
+           The three areas that you scored lowest in were X, Y & Z. 
+           Press on those points first to get relevant insights 
+           about those areas of digital transformation.</p>
+
+    </div>
+
+    <p class ="centered" style="font-size: 1.5em">Download the visual for personal use, or share on social media:</p>
+
+    <div class = "buttonContainer">
+        <a class = "borderedButton">Download Here</a>
+        <a class = "borderedButton">Share Here</a>
+    </div>
+</section>
 
 <h2 class="centered spacedBottom"> What Next? </h2>
 <p>No matter your results, there is always room for improvement 
