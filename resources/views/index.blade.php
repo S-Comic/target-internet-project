@@ -21,9 +21,9 @@
     <body class="antialiased">
 
     <!-- Include the ouput blade template -->
-    <main class="container">
+
         @include('components.output') 
-    </main>
+  
 
 
     

@@ -49,17 +49,12 @@ h2{ font-size: 2em; }
     margin-bottom: 20px;
 }
 
-#outputBanner{
-    margin: 20px 0;
-}
-
 /* ## MEDIA QUERIES ## */
 
 @media screen and (min-width: 480px) {
     .mediumScreen{ display:unset; }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     .largeScreen{ display:unset; }
-    .canvasContainer{ max-width: 50%;}
 }
