@@ -1,5 +1,5 @@
 <div id="outputBanner">
-    <h2>Results</h2>
+    <h2 class = "centered">Results</h2>
 </div>
 
 <p>Thank you for filling out the form. 
@@ -10,27 +10,29 @@ Your results are in the radar chart below:</p>
     <canvas id="radarChart"></canvas>
 </div>
 
-<p>Download the visual for personal use, or share on social media:</p>
+<p class ="centered" style="font-size: 1.5em">Download the visual for personal use, or share on social media:</p>
 
 <div class = "buttonContainer">
     <a class = "borderedButton">Download Here</a>
     <a class = "borderedButton">Share Here</a>
 </div>
 
-<h2> What Next? </h2>
+<h2 class="centered spacedBottom"> What Next? </h2>
 <p>No matter your results, there is always room for improvement 
 and a need to stay on top of the rapidly changing digital marketing landscape.</p>
-<a class = "borderedButton">Sign-Up</a>
+<div class = "buttonContainer">
+    <a class = "borderedButton">Sign-Up</a>
+</div>
 
-<p>Target Internet offers a variety of online learning solutions to fill the 
+<p class = "spacedBottom">Target Internet offers a variety of online learning solutions to fill the 
 digital skills gap.</p>
-<p>Sign-up to get access to the Target Internet e-Learning platform and our 
+<p class = "spacedBottom">Sign-up to get access to the Target Internet e-Learning platform and our 
 library of excusive courses, blogs and podcasts.</p>
-<p>Some examples include:</p>
+<p class = "spacedBottom">Some examples include:</p>
 
 <div class = "contentExamples"></div>
 
-<div class = "largeScreen">
+<div class = "mediumScreen">
     <h4> Interested in learning more? </h4>
     <p> Sign up for a 30 trial today > </p>
     <img src="#" />
