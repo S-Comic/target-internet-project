@@ -1,3 +1,6 @@
+<!-- Import Chart.js from npm -->
+<script src="{{ asset('chart.js/chart.js') }}"></script>
+
 <div id="outputBanner">
     <h2 class = "centered">Results</h2>
 </div>
@@ -38,68 +41,5 @@ library of excusive courses, blogs and podcasts.</p>
     <img src="#" />
 </div>
 
-<script>
-    /* ChartJS script */
-    /* Convert from inline to external when finished testing */
-
-    const labels = [
-        'Definition and Vision',
-        'Leadership',
-        'Agility',
-        'Environment',
-        'Skills',
-        'Strategic Positioning',
-        'Communication',
-        'Technology',
-        'Governance',
-        'Structure',
-        'Connections',
-        'Measurement',
-        'Innovation',
-        'Financial'
-    ];
-    const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Data from output',
-            backgroundColor: '#DB6E3BAA',
-            borderColor: '#DB6E3B',
-
-            /* Hardcoded the data for now, but I'll make this dynamic when the
-            questions section is done and I can get data fromt it */
-            data: [60, 40, 20, 70, 80, 50, 80, 30, 20, 50, 20, 50, 20, 70],
-        }]
-    };
-
-    const config = {
-        /* If you're editing this, find more information on how Chart.JS 
-        options work here: https://www.chartjs.org/docs/latest/axes/radial/linear.html */
-        type: 'radar',
-        data,
-        options: {
-            scales: {
-                r: {
-                    beginAtZero: true,
-                    suggestedMax: 100,
-                    ticks: {
-                        stepSize: 20,
-                        display: false,
-                    }
-                }
-            },
-            plugins: {
-            legend: {
-                display: false,
-            }
-        }
-     }
-        
-    };
-
-    /* Generate the chart */
-    var outputChart = new Chart(
-        document.getElementById('radarChart'),
-        config
-    );
-
-</script>
+<!-- Import config code for the radar chart -->
+<script src="{{ asset('js/charting.js') }}"></script>
