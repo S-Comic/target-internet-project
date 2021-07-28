@@ -61,6 +61,5 @@ Your results are in the radar chart below:</p>
     <img src="/images/targetinternetlogo.png" />
 </footer>
 
-
 <!-- Import config code for the radar chart -->
 <script src="{{ asset('js/charting.js') }}"></script>

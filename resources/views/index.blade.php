@@ -23,8 +23,8 @@
     <!-- Include the ouput blade template -->
 
         @include('components.output') 
-  
 
+  
 
     
     </body>

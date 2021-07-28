@@ -150,12 +150,12 @@ OUTPUT CSS
     #outputSectionOne{ 
         display: flex; 
         width: 90%;
-        margin: auto;
+        margin: 40px auto;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-evenly;
-        height: 70vh;
+        height: auto;
     }
     #outputSectionOne > *{
         width: 50% !important;
