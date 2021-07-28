@@ -29,8 +29,8 @@ Your results are in the radar chart below:</p>
         <p class ="centered" id="outputAnalysisSubtitle">Download the visual for personal use, or share on social media:</p>
 
         <div class = "buttonContainer">
-            <a class = "borderedButton">Download Here</a>
-            <a class = "borderedButton">Share Here</a>
+            <a href="#" class = "borderedButton">Download Here</a>
+            <a href="#" class = "borderedButton">Share Here</a>
         </div>
     </div>
 </section>
@@ -39,22 +39,21 @@ Your results are in the radar chart below:</p>
     <h2 class="centered spacedBottom"> What Next? </h2>
     <p>No matter your results, there is always room for improvement 
     and a need to stay on top of the rapidly changing digital marketing landscape.</p>
-    <div class = "buttonContainer">
-        <a class = "borderedButton">Sign-Up</a>
-    </div>
 
     <p class = "spacedBottom">Target Internet offers a variety of online learning solutions to fill the 
-    digital skills gap.</p>
-    <p class = "spacedBottom">Sign-up to get access to the Target Internet e-Learning platform and our 
+    digital skills gap. Sign-up to get access to the Target Internet e-Learning platform and our 
     library of excusive courses, blogs and podcasts.</p>
-    <p class = "spacedBottom">Some examples include:</p>
+    <div class = "buttonContainer">
+        <a href="#" class = "borderedButton">Sign-Up</a>
+    </div>
+    <p class = " largeScreen spacedBottom">Some examples include:</p>
 
-    <div class = "contentExamples"></div>
+    <img class = "largeScreen" id="examples" src="/images/examples.png" />
 </section>
 </div>
 </main>
 
-<footer id = "outputFooter" class = "largeScreen">
+<footer id = "outputFooter" >
     <div id = "footerTextContainer">
         <h4> Interested in learning more? </h4>
         <p> Sign up for a 30 trial today > </p>

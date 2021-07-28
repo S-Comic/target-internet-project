@@ -30,41 +30,80 @@ OUTPUT CSS
     margin: auto;
 }
 
-#outputBanner{
-    margin-top: 20px;
+#outputBanner{margin: 20px 20px 0 20px;}
+
+#outputFooter{
+    background-color: var(--brandColour);
+    color: white;
+    padding: 0 40px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#outputFooter h4{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#examples{
+    display: none;
+}
+
+.borderedButton{
+    width: 300px;
+}
+
+#outputFooter img{
+    height: 70px;
+}
+
+.flexWrapper{
+    display: flex;
 }
 
 /* ## MEDIA QUERIES ## */
 
 @media screen and (min-width: 480px) {
-    .mediumScreen{ display:unset; }
+    .mediumScreen{ display:unset !important; }
 }
 
 @media screen and (min-width: 1000px) {
-    .largeScreen{ display:unset; }
+    .largeScreen{ display:unset !important; }
+    .outputContainer{max-width: 100%;}
+
+    /* Buttons */
+    .buttonContainer{ flex-direction: row; justify-content: space-between;}
+
+    /* Section One */
     #outputSectionOne{ 
         display: flex; 
+        width: 90%;
+        margin: auto;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
+        justify-content: space-evenly;
         height: 70vh;
     }
     #outputSectionOne > *{
         width: 50% !important;
         height: auto;
-        padding: 0 50px;
     }
     #outputAnalysisSubtitle{
         font-size: 1.2em;
         margin-top: 20px;
         text-align: left;
     }
-    .buttonContainer{ flex-direction: row; justify-content: space-between;}
     #outputSectionOne .buttonContainer > .borderedButton{ width: 49%; }
-
-    .outputContainer{
-        max-width: 100%;
+    #outputSectionOne > div:last-of-type{
+        max-width: 500px;
     }
+
+
+    /* Output Banner */
 
     #outputBanner{
         position: relative;
@@ -83,18 +122,18 @@ OUTPUT CSS
         top: 0; left: 0;
         z-index: -1;
         width: 100%; height: 30vh;
-        filter: brightness(45%);
+        filter: brightness(30%);
         background-image: url("/images/outputHeader.png");
         background-position: center;
         background-size: cover;
     }
-    #outputBanner h2{
-        font-size: 3em;
-        text-transform: uppercase;
-    }
+    #outputBanner h2{font-size: 4em;text-transform: uppercase;}
+    #outputBanner p{font-size: 1.5em;}
+
+    /* Section Two */
     
     #outputSectionTwo{
-        padding: 0 20%;
+        padding: 0 25%;
         text-align: center;
     }
     #outputSectionTwo .buttonContainer{
@@ -103,22 +142,20 @@ OUTPUT CSS
     #outputSectionTwo .buttonContainer .borderedButton{
         width: 220px;
     }
-    #outputFooter{
-        background-color: var(--brandColour);
-        color: white;
-        padding: 0 40px;
-        height: 150px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+
+    #examples{
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
     }
+
+    /* Footer */
 
     #outputFooter h4{
         font-size: 2em;
         margin-bottom: 10px;
     }
-
+    
     #outputFooter img{
         height: 100px;
     }
