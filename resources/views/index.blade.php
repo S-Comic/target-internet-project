@@ -10,6 +10,7 @@
         <link href="/css/app.css" rel="stylesheet">
         <!-- Import Chart.js from npm -->
         <script src="{{ asset('chart.js/chart.js') }}"></script>
+        <script src="https://kit.fontawesome.com/e9011249b1.js" crossorigin="anonymous"></script>
 
         <!-- CDNs -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,7 @@
 
     <!-- Include the ouput blade template -->
     <main class="container">
-        @include('components.output') 
+        @include('components.questions') 
     </main>
 
 
