@@ -8,10 +8,10 @@
         <!-- Local Scripts / Styles -->
         <script src="/js/app.js"></script>
         <link href="/css/app.css" rel="stylesheet">
+        <!-- Import Chart.js from npm -->
+        <script src="{{ asset('chart.js/chart.js') }}"></script>
 
         <!-- CDNs -->
-        <!-- Move chart.js from CDN to local when finished testing -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -21,7 +21,11 @@
     <body class="antialiased">
 
     <!-- Include the ouput blade template -->
-    @include('components.output') 
+    <main class="container">
+        @include('components.output') 
+    </main>
 
+
+    
     </body>
 </html>

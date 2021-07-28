@@ -1,3 +1,65 @@
+/* ## GLOBALS & VARIABLES ## */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --brandColour: #DB6D3B;
+}
+
 h1, h2, h3, h4, h5, h6, p, a{
     font-family: 'PT Sans', sans-serif;
+}
+
+p{ font-size: 1.2em; }
+h2{ font-size: 2em; }
+
+.spacedTop{ margin-top: 20px; }
+.spacedBottom{ margin-bottom: 20px; }
+
+.mediumScreen{ display: none; }
+.largeScreen{ display: none; }
+
+
+/* ## MISC ## */
+
+.centered{
+    text-align: center;
+}
+
+.container{
+    /* Side margins */
+    margin: 0 30px 0 30px;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.borderedButton{
+    border: 3px solid var(--brandColour);
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--brandColour);
+    border-radius: 10px;
+    padding: 7px;
+    margin-bottom: 20px;
+}
+
+#outputBanner{
+    margin: 20px 0;
+}
+
+/* ## MEDIA QUERIES ## */
+
+@media screen and (min-width: 480px) {
+    .mediumScreen{ display:unset; }
+}
+
+@media screen and (min-width: 768px) {
+    .largeScreen{ display:unset; }
+    .canvasContainer{ max-width: 50%;}
 }
