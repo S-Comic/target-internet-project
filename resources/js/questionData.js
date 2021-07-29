@@ -73,7 +73,7 @@ window.questionArray = [
 ];
 
 // The list of question categories 
-const labels = [
+window.labels = [
     'Definition and Vision',
     'Leadership',
     'Agility',

@@ -1,18 +1,19 @@
-
 // Require the questions and labels from an external
 // file to hide the code dump.
 require('./questionData');
 
-// Create an empty array which will hold the question scores
-// and hold the current array position
 window.arrayHead = 0;
 window.dataArray = [];
+chartDataArray = new Array(14).fill(0);
 
 // When button is clicked, add approprite score
 // to array which is passed in from onclick
 window.addScore = function(value){
     dataArray[arrayHead] = value
     arrayHead++
+    if (arrayHead > 70){
+        createChart();
+    }
     window.update(value)
     return arrayHead
 }
@@ -30,14 +31,24 @@ window.update = function(){
     document.getElementById("questionCategory").innerHTML = labels[parseInt(arrayHead / 5)]
 }
 
+// Take array generated from questions and input
+// that data into a chartJS chart.
+window.createChart = function(){
+    for (let i=0; i<70; i++) {
+        chartDataArray[parseInt(i / 5)] = chartDataArray[parseInt(i / 5)] + (4 * dataArray[i])
+    };
+    console.log(chartDataArray)
+    // Generate the chart 
+    var outputChart = new Chart(
+    document.getElementById('radarChart'),
+    config
+    );
+}
+
 // Set the innerhtml of question and category before any
 // of the buttons are pressed
 window.update();
 
-// Chart creating code commented out for now
-// while working on logic.
-
-/*
 
 const data = {
     labels: labels,
@@ -48,12 +59,9 @@ const data = {
 
         // Hardcoded the data for now, but I'll make this dynamic when the
         // questions section is done and I can get data from it
-        data: [60, 40, 20, 70, 80, 50, 80, 30, 20, 50, 20, 50, 20, 70],
+        data: chartDataArray,
     }]
 };
-
-}
-
 
 
 
@@ -67,30 +75,19 @@ const config = {
             r: {
                 beginAtZero: true,
                 suggestedMax: 100,
+                grid: {backdropColor: 'red'},
                 ticks: {
                     stepSize: 20,
                     display: false,
                 },
-                grid: {
-                    backdropColor: 'red',
-                },
             }
         },
-        plugins: {
-        legend: {
-            display: false,
+    plugins: {
+    legend: {display: false,}
         }
     }
- }
-    
 };
 
 
 
-// Generate the chart 
-var outputChart = new Chart(
-    document.getElementById('radarChart'),
-    config
-);
 
-*/
