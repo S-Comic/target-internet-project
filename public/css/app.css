@@ -1,5 +1,23 @@
 /* ## GLOBALS & VARIABLES ## */
 
+@-webkit-keyframes makeVisible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+   }
+
+@keyframes makeVisible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+   }
+
 *{
     padding: 0;
     margin: 0;
@@ -29,7 +47,8 @@ h2{ font-size: 2em; }
 
 .container{
     /* Side margins */
-    margin: 0 30px 0 30px;
+    width: 100%;
+    padding: 0 30px 0 30px;
 }
 
 .buttonContainer{
@@ -86,6 +105,14 @@ h2{ font-size: 2em; }
     margin: 20px 0;
 }
 
+#outputContainer{
+    position: absolute;
+    display: none;
+    -webkit-animation: makeVisible 0.5s linear;
+            animation: makeVisible 0.5s linear;
+    background-color: white;
+}
+
 /* ## MEDIA QUERIES ## */
 
 @media screen and (min-width: 480px) {
@@ -96,3 +123,4 @@ h2{ font-size: 2em; }
     .largeScreen{ display:unset; }
     .canvasContainer{ max-width: 50%;}
 }
+

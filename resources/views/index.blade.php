@@ -22,8 +22,15 @@
     <body class="antialiased">
 
     <!-- Include the ouput blade template -->
-    <main id="questionContainer" class="container">
-        @include('components.questions') 
+    <main>
+    <div id="outputContainer" class="container">
+            @include('components.output') 
+        </div>
+        
+        <div id="questionContainer" class="container">
+            @include('components.questions') 
+        </div>
+
     </main>
 
 
