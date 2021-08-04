@@ -1,5 +1,14 @@
 /* ## GLOBALS & VARIABLES ## */
 
+@keyframes makeVisible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+   }
+
 *{
     padding: 0;
     margin: 0;
@@ -29,7 +38,8 @@ h2{ font-size: 2em; }
 
 .container{
     /* Side margins */
-    margin: 0 30px 0 30px;
+    width: 100%;
+    padding: 0 30px 0 30px;
 }
 
 .buttonContainer{
@@ -44,18 +54,176 @@ h2{ font-size: 2em; }
 .borderedButton{
     border: 3px solid var(--brandColour);
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: var(--brandColour);
     border-radius: 10px;
     padding: 7px;
     text-decoration: none;
     margin-bottom: 20px;
+    transition: 0.2s ease all;
+}
+
+.questionButton {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 7px 22px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.questionButton > i {
+    padding: 5px 5px 5px 5px;
+    border: 3px solid;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.questionButton > i::before {
+    visibility: hidden;
+}
+
+.selectedButton{
+    color: white;
+    background-color: var(--brandColour);
+}
+
+.selectedButton > i::before{
+    visibility: visible;
+}
+
+.navContainer {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--brandColour)
+}
+
+#navText {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.progressBar{
+    height: 50px;
+    background-color: var(--brandColour);
+    width: 100vw;
+    margin-left: -30px;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+}
+
+progress{
+    width: 80%;
+    border: 5px solid white;
+    height: 20px;
+    border-radius: 20px;
+    box-sizing: content-box;
+    background-color: white;
+    transition: ease-out 0.5s all;
+}
+
+progress[value] {
+    transition: ease-out 0.5s all;
+    border-radius: 1em;
+  }
+
+progress::-webkit-progress-bar {
+    border: 0;
+    border: 5px solid white;
+    transition: ease-out 0.5s all;
+    height: 20px;
+    border-radius: 20px;
+    border: 10px;
+    background-color: white;
+}
+progress::-webkit-progress-value {
+    border: 0;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--brandColour);
+    transition: ease-out 0.5s all;
+}
+progress::-moz-progress-bar {
+    border: 0;
+    height: 20px;
+    border-radius: 20px;
+    transition: ease-out 0.5s all;
+    border: 5px solid white;
+    border: 10px;
+    background-color: white;
+}
+
+.progressBar h3{
+    width: 20%;
+    color: white;
+    text-align: right;
+}
+
+.arrow {
+    padding: 5px;
+    border: 3px solid;
+    border-radius: 10px;
+    font-size: 24px;
     transition: 0.3s ease all;
 }
 
 .borderedButton:hover{
     color: white;
     background-color: var(--brandColour);
+}
+
+#outputContainer{
+    position: absolute;
+    display: none;
+    animation: makeVisible 0.5s linear;
+    background-color: white;
+}
+
+#questionContainer{
+    max-height: 100vh;
+}
+
+#questionContainer .buttonContainer{
+    height: 70vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0;
+}
+
+.questionContainer{
+    padding-top: 50px;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: bold;
+}
+
+#questionIcon{
+    position: absolute;
+    color: var(--brandColour);
+    font-size: 20vh;
+    padding-top: 20px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+#question{
+    color: #4A4A4A;
+}
+
+#questionCategory{
+    color: var(--brandColour);
 }
 
 /* ## MEDIA QUERIES ## */
@@ -66,4 +234,6 @@ h2{ font-size: 2em; }
 
 @media screen and (min-width: 1000px) {
     .largeScreen{ display:unset; }
+    .canvasContainer{ max-width: 50%;}
 }
+
