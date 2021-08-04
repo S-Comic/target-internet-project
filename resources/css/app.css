@@ -16,6 +16,8 @@
     --brandColour: #DB6D3B;
 }
 
+body {overflow-x: hidden;}
+
 h1, h2, h3, h4, h5, h6, p, a{
     font-family: 'PT Sans', sans-serif;
 }
@@ -67,6 +69,7 @@ h2{ font-size: 2em; }
     display: flex;
     justify-content: space-between;
     text-align: left;
+    cursor: pointer;
     padding: 7px 22px;
     margin-bottom: 0;
     width: 100%;

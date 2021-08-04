@@ -17,5 +17,6 @@ mix.js('resources/js/charting.js', 'public/js')
 
 mix.styles([
     'resources/css/app.css',
-    'resources/css/output.css'
+    'resources/css/output.css',
+    'resources/css/questions.css'
 ], 'public/css/app.css');

@@ -23,14 +23,15 @@ OUTPUT CSS
 }
 #radarChart{
     height: 600px;
+    max-height: 400px;
 }
 
-.outputContainer{
-    max-width: 600px;
-    margin: auto;
+#outputContainer{
+    padding: 0;
 }
 
 #outputBanner{margin: 20px 20px 0 20px;}
+#outputBanner > * {z-index: 1}
 
 #outputFooter{
     background-color: var(--brandColour);
@@ -86,7 +87,7 @@ OUTPUT CSS
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-evenly;
-        height: auto;
+        height: 60vh; 
     }
     #outputSectionOne > *{
         width: 50% !important;
@@ -120,7 +121,6 @@ OUTPUT CSS
         content: "";
         position: absolute;
         top: 0; left: 0;
-        z-index: -1;
         width: 100%; height: 30vh;
         filter: brightness(30%);
         background-image: url("/images/outputHeader.png");

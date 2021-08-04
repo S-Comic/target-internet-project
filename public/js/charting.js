@@ -6648,8 +6648,9 @@ var data = {
     label: 'Data from output',
     backgroundColor: '#DB6E3BAA',
     borderColor: '#DB6E3B',
-    data: chartDataArray
-
+    data: chartDataArray,
+    pointBackgroundColor: 'white',
+    pointBorderWidth: 2
   }]
 };
 var config = {
@@ -6667,9 +6668,6 @@ var config = {
         },
         ticks: {
           stepSize: 20
-        },
-        grid: {
-          backdropColor: 'red'
         }
       }
     },

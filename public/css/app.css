@@ -1,14 +1,5 @@
 /* ## GLOBALS & VARIABLES ## */
 
-@-webkit-keyframes makeVisible {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-   }
-
 @keyframes makeVisible {
     from {
       opacity: 0;
@@ -24,6 +15,8 @@
     box-sizing: border-box;
     --brandColour: #DB6D3B;
 }
+
+body {overflow-x: hidden;}
 
 h1, h2, h3, h4, h5, h6, p, a{
     font-family: 'PT Sans', sans-serif;
@@ -76,6 +69,7 @@ h2{ font-size: 2em; }
     display: flex;
     justify-content: space-between;
     text-align: left;
+    cursor: pointer;
     padding: 7px 22px;
     margin-bottom: 0;
     width: 100%;
@@ -146,7 +140,6 @@ progress[value] {
 progress::-webkit-progress-bar {
     border: 0;
     border: 5px solid white;
-    -webkit-transition: ease-out 0.5s all;
     transition: ease-out 0.5s all;
     height: 20px;
     border-radius: 20px;
@@ -158,14 +151,12 @@ progress::-webkit-progress-value {
     height: 20px;
     border-radius: 20px;
     background-color: var(--brandColour);
-    -webkit-transition: ease-out 0.5s all;
     transition: ease-out 0.5s all;
 }
 progress::-moz-progress-bar {
     border: 0;
     height: 20px;
     border-radius: 20px;
-    -moz-transition: ease-out 0.5s all;
     transition: ease-out 0.5s all;
     border: 5px solid white;
     border: 10px;
@@ -194,8 +185,7 @@ progress::-moz-progress-bar {
 #outputContainer{
     position: absolute;
     display: none;
-    -webkit-animation: makeVisible 0.5s linear;
-            animation: makeVisible 0.5s linear;
+    animation: makeVisible 0.5s linear;
     background-color: white;
 }
 
@@ -247,4 +237,169 @@ progress::-moz-progress-bar {
 
 @media screen and (min-width: 1000px) {
     .largeScreen{ display:unset; }
+    .canvasContainer{ max-width: 50%;}
+}
+
+
+/*
+==================================================
+OUTPUT CSS
+==================================================
+*/
+
+/* ## MISC ## */
+
+#outputSectionOne{ 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#outputAnalysisSubtitle{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.canvasContainer{ 
+    width: 100%;
+    max-width: 600px;
+}
+#radarChart{
+    height: 600px;
+    max-height: 400px;
+}
+
+#outputContainer{
+    padding: 0;
+}
+
+#outputBanner{margin: 20px 20px 0 20px;}
+#outputBanner > * {z-index: 1}
+
+#outputFooter{
+    background-color: var(--brandColour);
+    color: white;
+    padding: 0 40px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#outputFooter h4{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#examples{
+    display: none;
+}
+
+.borderedButton{
+    width: 300px;
+}
+
+#outputFooter img{
+    height: 70px;
+}
+
+.flexWrapper{
+    display: flex;
+}
+
+/* ## MEDIA QUERIES ## */
+
+@media screen and (min-width: 480px) {
+    .mediumScreen{ display:unset !important; }
+}
+
+@media screen and (min-width: 1000px) {
+    .largeScreen{ display:unset !important; }
+    .outputContainer{max-width: 100%;}
+
+    /* Buttons */
+    .buttonContainer{ flex-direction: row; justify-content: space-between;}
+
+    /* Section One */
+    #outputSectionOne{ 
+        display: flex; 
+        width: 90%;
+        margin: 40px auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 60vh; 
+    }
+    #outputSectionOne > *{
+        width: 50% !important;
+        height: auto;
+    }
+    #outputAnalysisSubtitle{
+        font-size: 1.2em;
+        margin-top: 20px;
+        text-align: left;
+    }
+    #outputSectionOne .buttonContainer > .borderedButton{ width: 49%; }
+    #outputSectionOne > div:last-of-type{
+        max-width: 500px;
+    }
+
+
+    /* Output Banner */
+
+    #outputBanner{
+        position: relative;
+        padding: 20px 0;
+        color: white; 
+        height: 30vh;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #outputBanner::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 30vh;
+        filter: brightness(30%);
+        background-image: url("/images/outputHeader.png");
+        background-position: center;
+        background-size: cover;
+    }
+    #outputBanner h2{font-size: 4em;text-transform: uppercase;}
+    #outputBanner p{font-size: 1.5em;}
+
+    /* Section Two */
+    
+    #outputSectionTwo{
+        padding: 0 25%;
+        text-align: center;
+    }
+    #outputSectionTwo .buttonContainer{
+        justify-content: center;
+    }
+    #outputSectionTwo .buttonContainer .borderedButton{
+        width: 220px;
+    }
+
+    #examples{
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    /* Footer */
+
+    #outputFooter h4{
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    
+    #outputFooter img{
+        height: 100px;
+    }
 }
