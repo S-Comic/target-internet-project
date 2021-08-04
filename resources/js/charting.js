@@ -12,6 +12,9 @@ var chartLabels = new Array(14).fill("");
 for (let i=0; i<14; i++){
     chartLabels[i] = labels[i][0]
 }
+var questionButtons = document.getElementsByClassName("questionButton")
+questionButtons = Array.prototype.slice.call(questionButtons, 0)
+questionButtons.reverse()
 
 // When button is clicked, add approprite score
 // to array which is passed in from onclick
@@ -45,9 +48,19 @@ window.update = function(){
     if (arrayHead == 0){document.getElementById("navLeft").style.visibility = "hidden"}
     else {document.getElementById("navLeft").style.visibility = "visible"}
 
-    if (dataArray[arrayHead] == "unfilled"){document.getElementById("navRight").style.visibility = "hidden"}
-    else {document.getElementById("navRight").style.visibility = "visible"}
-    console.log(dataArray[arrayHead])
+    for (let i=0; i < questionButtons.length; i++){
+        questionButtons[i].classList.remove("selectedButton")
+    }
+
+    if (dataArray[arrayHead] == "unfilled"){
+        document.getElementById("navRight").style.visibility = "hidden"
+    }
+    else {
+        document.getElementById("navRight").style.visibility = "visible"
+        questionButtons[dataArray[arrayHead]].classList.add("selectedButton")
+    }
+    document.getElementById("progressBarElement").value = (arrayHead/70) * 100
+    document.getElementById("progressPercentage").innerHTML = parseInt((arrayHead/70) * 100) + "%"
 }
 
 // Take array generated from questions and input
