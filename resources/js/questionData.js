@@ -74,38 +74,19 @@ window.questionArray = [
 
 // The list of question categories 
 window.labels = [
-    'Definition and Vision',
-    'Leadership',
-    'Agility',
-    'Environment',
-    'Skills',
-    'Strategic Positioning',
-    'Communication',
-    'Technology',
-    'Governance',
-    'Structure',
-    'Connections',
-    'Measurement',
-    'Innovation',
-    'Financial'
+    ['Definition and Vision', 'fa-eye'],
+    ['Leadership', 'fa-crown'],
+    ['Agility', 'fa-running'],
+    ['Environment', 'fa-globe-americas'],
+    ['Skills', 'fa-users'],
+    ['Strategic Positioning', 'fa-clipboard-check'],
+    ['Communication', 'fa-comment-alt'],
+    ['Technology', 'fa-cog'],
+    ['Governance', 'fa-balance-scale'],
+    ['Structure', 'fa-hard-hat'],
+    ['Connections', 'fa-handshake'],
+    ['Measurement', 'fa-ruler'],
+    ['Innovation', 'fa-brain'],
+    ['Financial', 'fa-chart-line']
 ];
 
-/* 
-ICONS
-
-<i class="fa-solid fa-eye"></i> = Vision
-<i class="fa-solid fa-crown"></i> = Leadership
-<i class="fa-solid fa-person-running"></i> = Agility
-<i class="fa-solid fa-earth-americas"></i> = Environment
-<i class="fa-solid fa-users"></i> = Skills & Talent
-<i class="fa-solid fa-clipboard-check"></i> = Positioning
-<i class="fa-solid fa-message"></i> = Communications
-<i class="fa-solid fa-gear"></i> = Technology
-<i class="fa-solid fa-scale-balanced"></i> = Process
-<i class="fa-solid fa-helmet-safety"></i> = Structure
-<i class="fa-solid fa-handshake"></i> = Connections
-<i class="fa-solid fa-ruler"></i> = Measurement
-<i class="fa-solid fa-brain"></i> = Innovation
-<i class="fa-solid fa-chart-line"></i> = Financial
-
-*/

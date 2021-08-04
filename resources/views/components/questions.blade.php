@@ -6,7 +6,7 @@
 <!-- Question -->
 <div class="questionContainer">
     <!-- Add Icon here -->
-    <i class="fas fa-eye"></i>
+    <i id = "questionIcon" class="fas fa-eye"></i>
     
     <p id="questionCategory"></p>
     <h3 id="question"></h3>

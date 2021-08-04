@@ -8,6 +8,10 @@ require('./questionData');
 window.arrayHead = 0;
 window.dataArray = [];
 chartDataArray = new Array(14).fill(0);
+var chartLabels = new Array(14).fill("");
+for (let i=0; i<14; i++){
+    chartLabels[i] = labels[i][0]
+}
 
 // When button is clicked, add approprite score
 // to array which is passed in from onclick
@@ -34,8 +38,9 @@ window.navigate = function(value){
 // When data has been changed, update innerhtml
 window.update = function(){
     document.getElementById("question").innerHTML = questionArray[arrayHead]
-    document.getElementById("questionCategory").innerHTML = labels[parseInt(arrayHead / 5)]
+    document.getElementById("questionCategory").innerHTML = labels[parseInt(arrayHead / 5)][0]
     document.getElementById("navText").innerHTML = (arrayHead+1) + " / 70"
+    document.getElementById("questionIcon").className = "fas " + labels[parseInt(arrayHead / 5)][1]
 }
 
 // Take array generated from questions and input
@@ -55,9 +60,8 @@ window.createChart = function(){
 // of the buttons are pressed
 window.update();
 
-
 const data = {
-    labels: labels,
+    labels: chartLabels,
     datasets: [{
         label: 'Data from output',
         backgroundColor: '#DB6E3BAA',
