@@ -14,23 +14,33 @@
 
 <!-- Buttons -->
 <div class = "buttonContainer">
-    <a class = "borderedButton" onclick="addScore(4)">Strongly Agree</a>
+    <a class = "borderedButton questionButton" onclick="addScore(4)">Strongly Agree
+        <i class="fas fa-check"></i>
+    </a>
 </div>
 
 <div class = "buttonContainer">
-    <a class = "borderedButton" onclick="addScore(3)">Agree</a>
+    <a class = "borderedButton questionButton" onclick="addScore(3)">Agree
+        <i class="fas fa-check"></i>
+    </a>
 </div>
 
 <div class = "buttonContainer">
-    <a class = "borderedButton" onclick="addScore(2)">Unsure</a>
+    <a class = "borderedButton questionButton" onclick="addScore(2)">Unsure
+        <i class="fas fa-check"></i>
+    </a>
 </div>
 
 <div class = "buttonContainer">
-    <a class = "borderedButton" onclick="addScore(1)">Disagree</a>
+    <a class = "borderedButton questionButton" onclick="addScore(1)">Disagree
+        <i class="fas fa-check"></i>
+    </a>
 </div>
 
 <div class = "buttonContainer">
-    <a class = "borderedButton" onclick="addScore(0)">Strongly Disagree</a>
+    <a class = "borderedButton questionButton" onclick="addScore(0)">Strongly Disagree
+        <i class="fas fa-check"></i>
+    </a>
 </div>
 
 <!-- Nav -->
