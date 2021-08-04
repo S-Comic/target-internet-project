@@ -22,10 +22,12 @@
     <body class="antialiased">
 
     <!-- Include the ouput blade template -->
-    <main class="container">
+    <main id="questionContainer" class="container">
         @include('components.questions') 
     </main>
 
+
+    <script src="{{ asset('js/charting.js') }}"></script>
 
     
     </body>

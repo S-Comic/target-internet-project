@@ -1,4 +1,7 @@
 // Require the questions and labels from an external
+
+const { stringify } = require('postcss');
+
 // file to hide the code dump.
 require('./questionData');
 
@@ -29,6 +32,7 @@ window.navigate = function(value){
 window.update = function(){
     document.getElementById("question").innerHTML = questionArray[arrayHead]
     document.getElementById("questionCategory").innerHTML = labels[parseInt(arrayHead / 5)]
+    document.getElementById("navText").innerHTML = (arrayHead+1) + " / 70"
 }
 
 // Take array generated from questions and input
@@ -37,7 +41,6 @@ window.createChart = function(){
     for (let i=0; i<70; i++) {
         chartDataArray[parseInt(i / 5)] = chartDataArray[parseInt(i / 5)] + (4 * dataArray[i])
     };
-    console.log(chartDataArray)
     // Generate the chart 
     var outputChart = new Chart(
     document.getElementById('radarChart'),
