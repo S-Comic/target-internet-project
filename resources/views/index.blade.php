@@ -34,6 +34,8 @@
     </main>
 
 
+  
+
     <script src="{{ asset('js/charting.js') }}"></script>
 
     

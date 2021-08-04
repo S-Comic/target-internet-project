@@ -12,9 +12,10 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
 
 mix.js('resources/js/charting.js', 'public/js')
-mix.copy('node_modules/chart.js/dist/chart.js', 'public/chart.js/chart.js');
+
+mix.styles([
+    'resources/css/app.css',
+    'resources/css/output.css'
+], 'public/css/app.css');

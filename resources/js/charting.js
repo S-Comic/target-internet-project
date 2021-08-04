@@ -86,10 +86,9 @@ const data = {
         label: 'Data from output',
         backgroundColor: '#DB6E3BAA',
         borderColor: '#DB6E3B',
-
-        // Hardcoded the data for now, but I'll make this dynamic when the
-        // questions section is done and I can get data from it
         data: chartDataArray,
+        pointBackgroundColor: 'white',
+        pointBorderWidth: 2,
     }]
 };
 
@@ -108,7 +107,6 @@ const config = {
                 grid: {backdropColor: 'red'},
                 ticks: {
                     stepSize: 20,
-                    display: false,
                 },
             }
         },

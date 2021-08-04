@@ -46,6 +46,8 @@ h2{ font-size: 2em; }
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -56,6 +58,7 @@ h2{ font-size: 2em; }
     color: var(--brandColour);
     border-radius: 10px;
     padding: 7px;
+    text-decoration: none;
     margin-bottom: 20px;
     transition: 0.2s ease all;
 }
@@ -168,10 +171,12 @@ progress::-moz-progress-bar {
     border: 3px solid;
     border-radius: 10px;
     font-size: 24px;
+    transition: 0.3s ease all;
 }
 
-#outputBanner{
-    margin: 20px 0;
+.borderedButton:hover{
+    color: white;
+    background-color: var(--brandColour);
 }
 
 #outputContainer{
@@ -227,7 +232,8 @@ progress::-moz-progress-bar {
     .mediumScreen{ display:unset; }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     .largeScreen{ display:unset; }
     .canvasContainer{ max-width: 50%;}
 }
+
