@@ -17281,6 +17281,9 @@ var data = {
     label: 'Data from output',
     backgroundColor: '#DB6E3BAA',
     borderColor: '#DB6E3B',
+    pointBackgroundColor: 'white',
+    pointBorderWidth: 2,
+    angleLinesColor: 'red',
 
     /* Hardcoded the data for now, but I'll make this dynamic when the
     questions section is done and I can get data from it */
@@ -17298,8 +17301,7 @@ var config = {
         beginAtZero: true,
         suggestedMax: 100,
         ticks: {
-          stepSize: 20,
-          display: false
+          stepSize: 20
         },
         grid: {
           backdropColor: 'red'
