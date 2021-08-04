@@ -14,8 +14,11 @@ chartDataArray = new Array(14).fill(0);
 window.addScore = function(value){
     dataArray[arrayHead] = value
     arrayHead++
-    if (arrayHead > 70){
+    if (arrayHead >= 70){
         createChart();
+        document.getElementById("outputContainer").style.display = "block";
+        document.getElementById("outputContainer").style.webkitAnimationPlayState= "running";
+        return
     }
     window.update(value)
     return arrayHead
