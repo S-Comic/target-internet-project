@@ -6,7 +6,7 @@ const { stringify } = require('postcss');
 require('./questionData');
 
 window.arrayHead = 0;
-window.dataArray = [];
+window.dataArray = new Array(70).fill("unfilled");
 chartDataArray = new Array(14).fill(0);
 var chartLabels = new Array(14).fill("");
 for (let i=0; i<14; i++){
@@ -41,6 +41,13 @@ window.update = function(){
     document.getElementById("questionCategory").innerHTML = labels[parseInt(arrayHead / 5)][0]
     document.getElementById("navText").innerHTML = (arrayHead+1) + " / 70"
     document.getElementById("questionIcon").className = "fas " + labels[parseInt(arrayHead / 5)][1]
+    
+    if (arrayHead == 0){document.getElementById("navLeft").style.visibility = "hidden"}
+    else {document.getElementById("navLeft").style.visibility = "visible"}
+
+    if (dataArray[arrayHead] == "unfilled"){document.getElementById("navRight").style.visibility = "hidden"}
+    else {document.getElementById("navRight").style.visibility = "visible"}
+    console.log(dataArray[arrayHead])
 }
 
 // Take array generated from questions and input

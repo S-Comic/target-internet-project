@@ -6564,7 +6564,7 @@ var _require = __webpack_require__(/*! postcss */ "./node_modules/postcss/lib/po
 __webpack_require__(/*! ./questionData */ "./resources/js/questionData.js");
 
 window.arrayHead = 0;
-window.dataArray = [];
+window.dataArray = new Array(70).fill("unfilled");
 chartDataArray = new Array(14).fill(0);
 var chartLabels = new Array(14).fill("");
 
@@ -6602,6 +6602,20 @@ window.update = function () {
   document.getElementById("questionCategory").innerHTML = labels[parseInt(arrayHead / 5)][0];
   document.getElementById("navText").innerHTML = arrayHead + 1 + " / 70";
   document.getElementById("questionIcon").className = "fas " + labels[parseInt(arrayHead / 5)][1];
+
+  if (arrayHead == 0) {
+    document.getElementById("navLeft").style.visibility = "hidden";
+  } else {
+    document.getElementById("navLeft").style.visibility = "visible";
+  }
+
+  if (dataArray[arrayHead] == "unfilled") {
+    document.getElementById("navRight").style.visibility = "hidden";
+  } else {
+    document.getElementById("navRight").style.visibility = "visible";
+  }
+
+  console.log(dataArray[arrayHead]);
 }; // Take array generated from questions and input
 // that data into a chartJS chart.
 

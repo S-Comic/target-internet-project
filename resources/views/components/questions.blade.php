@@ -45,13 +45,13 @@
 
 <!-- Nav -->
 <div class = "navContainer">
-    <div onclick="navigate(-1)" class = "questionNav navLeft">
+    <div onclick="navigate(-1)" id = "navLeft" class = "questionNav">
         <i class = "fas fa-arrow-left arrow"></i>
     </div>
 
     <p id="navText" class = "centered">x/60</p>
     
-    <div onclick="navigate(1)" class = "questionNav navRight">
+    <div onclick="navigate(1)" id = "navRight" class = "questionNav">
         <i class = "fas fa-arrow-right arrow"></i>
     </div>
 </div>
