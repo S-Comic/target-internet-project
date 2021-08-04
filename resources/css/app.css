@@ -13,10 +13,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --brandColour: #DB6D3B;
 }
 
-body {overflow-x: hidden;}
+:root{
+    --brandColour: #DB6D3B;
+    --backgroundColor: white;
+    --textColor: #4A4A4A;
+    --testColor: #24282d;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--backgroundColor);
+}
 
 h1, h2, h3, h4, h5, h6, p, a{
     font-family: 'PT Sans', sans-serif;
@@ -75,6 +84,9 @@ h2{ font-size: 2em; }
     width: 100%;
 }
 
+.questionNav{
+    visibility: hidden;
+}
 .questionButton > i {
     padding: 5px 5px 5px 5px;
     border: 3px solid;
@@ -96,7 +108,7 @@ h2{ font-size: 2em; }
 }
 
 .navContainer {
-    width: 55%;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,17 +130,17 @@ h2{ font-size: 2em; }
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 0 0 30px;
     justify-content: space-between;
 }
 
 progress{
-    width: 80%;
-    border: 5px solid white;
+    width: 100%;
+    border: 5px solid var(--backgroundColor);
     height: 20px;
     border-radius: 20px;
     box-sizing: content-box;
-    background-color: white;
+    background-color: var(--backgroundColor);
     transition: ease-out 0.5s all;
 }
 
@@ -139,12 +151,12 @@ progress[value] {
 
 progress::-webkit-progress-bar {
     border: 0;
-    border: 5px solid white;
+    border: 5px solid var(--backgroundColor);
     transition: ease-out 0.5s all;
     height: 20px;
     border-radius: 20px;
     border: 10px;
-    background-color: white;
+    background-color: var(--backgroundColor);
 }
 progress::-webkit-progress-value {
     border: 0;
@@ -158,14 +170,14 @@ progress::-moz-progress-bar {
     height: 20px;
     border-radius: 20px;
     transition: ease-out 0.5s all;
-    border: 5px solid white;
+    border: 5px solid var(--backgroundColor);
     border: 10px;
-    background-color: white;
+    background-color: var(--backgroundColor);
 }
 
 .progressBar h3{
-    width: 20%;
-    color: white;
+    padding: 30px;
+    color: var(--backgroundColor);
     text-align: right;
 }
 
@@ -174,7 +186,13 @@ progress::-moz-progress-bar {
     border: 3px solid;
     border-radius: 10px;
     font-size: 24px;
-    transition: 0.3s ease all;
+}
+
+.arrow:hover{
+    color: white;
+    background-color: var(--brandColour);
+    border: 3px solid;
+    cursor: pointer;
 }
 
 .borderedButton:hover{
@@ -210,6 +228,7 @@ progress::-moz-progress-bar {
     justify-content: space-evenly;
     text-align: center;
     font-weight: bold;
+    margin: auto;
 }
 
 #questionIcon{
@@ -222,7 +241,7 @@ progress::-moz-progress-bar {
 }
 
 #question{
-    color: #4A4A4A;
+    color: var(--textColor);
 }
 
 #questionCategory{
@@ -233,6 +252,7 @@ progress::-moz-progress-bar {
 
 @media screen and (min-width: 480px) {
     .mediumScreen{ display:unset; }
+    .questionContainer{ max-width: 500px;}
 }
 
 @media screen and (min-width: 1000px) {
