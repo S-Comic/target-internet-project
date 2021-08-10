@@ -6625,7 +6625,13 @@ window.update = function () {
 
   document.getElementById("progressBarElement").value = arrayHead / 70 * 100;
   document.getElementById("progressPercentage").innerHTML = parseInt(arrayHead / 70 * 100) + "%";
-}; // Take array generated from questions and input
+}; // When the chart is created, assign the link to the download button
+
+
+function createDownloadButton() {
+  var url = outputChart.toBase64Image();
+  document.getElementById("downloadButton").href = url;
+} // Take array generated from questions and input
 // that data into a chartJS chart.
 
 
@@ -6636,7 +6642,7 @@ window.createChart = function () {
 
   ; // Generate the chart 
 
-  var outputChart = new Chart(document.getElementById('radarChart'), config);
+  window.outputChart = new Chart(document.getElementById('radarChart'), config); // document.getElementById('downloadButton').href = outputChart.toBase64Image()
 }; // Set the innerhtml of question and category before any
 // of the buttons are pressed
 
@@ -6659,6 +6665,9 @@ var config = {
   type: 'radar',
   data: data,
   options: {
+    animation: {
+      onComplete: createDownloadButton
+    },
     scales: {
       r: {
         beginAtZero: true,

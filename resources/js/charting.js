@@ -63,6 +63,13 @@ window.update = function(){
     document.getElementById("progressPercentage").innerHTML = parseInt((arrayHead/70) * 100) + "%"
 }
 
+
+// When the chart is created, assign the link to the download button
+function createDownloadButton(){
+    var url=outputChart.toBase64Image();
+    document.getElementById("downloadButton").href=url;
+  }
+
 // Take array generated from questions and input
 // that data into a chartJS chart.
 window.createChart = function(){
@@ -70,10 +77,13 @@ window.createChart = function(){
         chartDataArray[parseInt(i / 5)] = chartDataArray[parseInt(i / 5)] + (4 * dataArray[i])
     };
     // Generate the chart 
-    var outputChart = new Chart(
+    window.outputChart = new Chart(
     document.getElementById('radarChart'),
     config
     );
+
+    // document.getElementById('downloadButton').href = outputChart.toBase64Image()
+    
 }
 
 // Set the innerhtml of question and category before any
@@ -100,6 +110,9 @@ const config = {
     type: 'radar',
     data,
     options: {
+        animation: {
+            onComplete: createDownloadButton
+          },
         scales: {
             r: {
                 beginAtZero: true,

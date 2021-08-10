@@ -29,7 +29,7 @@ Your results are in the radar chart below:</p>
         <p class ="centered" id="outputAnalysisSubtitle">Download the visual for personal use, or share on social media:</p>
 
         <div class = "buttonContainer">
-            <a href="#" class = "borderedButton">Download Here</a>
+            <a id = "downloadButton" class = "borderedButton" download="My Results Chart">Download Here</a>
             <a href="#" class = "borderedButton">Share Here</a>
         </div>
     </div>
